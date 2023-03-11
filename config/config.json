@@ -1,0 +1,10 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "mengingatMU513",
+    "database": "database_movies",
+    "host": "localhost",
+    "dialect": "postgresql",
+    "operatorsAliases": false
+  }
+}

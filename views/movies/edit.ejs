@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Edit Movie: <%= movie.title %></title>
+</head>
+<body>
+  <h1>Edit Movie: <%= movie.title %></h1>
+  <form action="/movies/<%= movie.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT">
+    <label for="title">Title:</label><br>
+    <input type="text" id="title" name="title" value="<%= movie.title %>"><br>
+    <label for="genres">Genres:</label><br>
+    <input type="text" id="genres" name="genres" value="<%= movie.genres %>"><br>
+    <label for="year">Year:</label><br>
+    <input type="text" id="year" name="year" value="<%= movie.year %>"><br>
+    <label for="photo">Photo:</label><br>
+    <input type="text" id="photo" name="photo" value="<%= movie.photo %>"><br>
+    <br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+</html>

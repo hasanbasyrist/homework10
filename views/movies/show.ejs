@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title><%= movie.title %></title>
+  </head>
+  <body>
+    <h1><%= movie.title %></h1>
+    <p>Genres: <%= movie.genres %></p>
+    <p>Year: <%= movie.year %></p>
+    <p>Photo: <img src="<%= movie.photo %>" alt="<%= movie.title %>" width="300"></p>
+    <p><a href="/movies/<%= movie.id %>/edit">Edit</a></p>
+    <form action="/movies/<%= movie.id %>/delete" method="POST" onsubmit="return confirm('Are you sure you want to delete this movie?');">
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+    </form>
+    <p><a href="/movies">Back to list of movies</a></p>
+  </body>
+</html>

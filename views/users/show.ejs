@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>User <%= user.email %></title>
+  </head>
+  <body>
+    <h1>User <%= user.email %></h1>
+    <p>Email: <%= user.email %></p>
+    <p>Gender: <%= user.gender %></p>
+    <p>Role: <%= user.role %></p>
+    <p><a href="/users/<%= user.id %>/edit">Edit</a></p>
+    <form action="/users/<%= user.id %>" method="POST" onsubmit="return confirm('Are you sure you want to delete this user?');">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" value="Delete">
+        </form>
+        <p><a href="/users">Back to Users</a></p>
+          </body>
+        </html>
+
+
+
+        
